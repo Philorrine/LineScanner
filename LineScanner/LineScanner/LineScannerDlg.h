@@ -3,7 +3,7 @@
 //
 
 #pragma once
-
+#include "cv.h"
 
 // CLineScannerDlg ¶Ô»°¿ò
 class CLineScannerDlg : public CDialogEx
@@ -29,4 +29,8 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedButtonExtract();
+	afx_msg void OnBnClickedButtonLoadimg();
+	float DrawToCDC(IplImage* img, CDC* pDC);
 };
